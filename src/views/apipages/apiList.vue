@@ -18,9 +18,9 @@
               <i class="el-icon-location"></i>
               <span>{{item.groupName}}</span>
             </template>
-            <el-menu-item :index="tag.apiId+'10'" v-for="tag in item.apis" :key="tag.apiId">
+            <el-menu-item :index="tag.apiId+'10'" v-for="tag in item.apis" :key="tag.apiId" @click="toAppEdit2(tag.apiId)">
               <i class="el-icon-menu"></i>
-              <span slot="title" @click="toAppEdit2(tag.apiId)">{{tag.apiName}}</span>
+              <span slot="title" >{{tag.apiName}}</span>
             </el-menu-item>
           </el-submenu>
         </el-menu>
